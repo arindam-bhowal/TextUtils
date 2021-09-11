@@ -44,7 +44,7 @@ export default function Textform(props) {
             <button className="btn btn-primary mx-2 my-2" onClick={handleCopy}>Copy Text</button>
             <div className="contsiner my-3" style= {{color: props.mode==='light'? 'black': 'white'}}>
                 <h2>Your Text Summary</h2>
-                <p>{text.split(" ").length} words and {text.length} characters</p>
+                <p>{text.length===0?0:(text.charAt(text.length-1)===' '?text.split(' ').length-1:text.split(' ').length) } words and {text.length} characters</p>
                 <h3>Preview:</h3>
                 <p>{text.length > 0 ? text : 'Enter text in the text-box to preview here'}</p>
             </div>
